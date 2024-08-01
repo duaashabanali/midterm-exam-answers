@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 100%;
+            flex: 1;
+        }
+
+        .container {
+            margin: 15px;
+        }
+
+        .purple-row {
+            background-color: rgb(91, 31, 91);
+            height: 100px;
+        }
+        .yellow-row {
+            background-color: rgb(250, 238, 72);
+            height: 100px;
+        }
+        .red-row {
+            background-color: rgb(207, 17, 17);
+            height: 100px;
+        }
+
+        .blue-column {
+            background-color: blue;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="column">
+                <div class="purple-row"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="row">
+                    <div class="yellow-row"></div>
+                </div>
+                <div class="row">
+                    <div class="red-row"></div>
+                </div>
+            </div>
+            <div class="column">
+                
+                    <div class="blue-column"></div>
+                
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

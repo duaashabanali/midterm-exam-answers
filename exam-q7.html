@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="exam-q7.html">
+        <input type="date" id="date" required>
+        <button type="button" id="btn">submit</button>
+    </form>
+    <div id="result"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded",()=>{
+            div = document.getElementById("result")
+            btn.addEventListener("click",()=>{
+                date = document.getElementById("date")
+                if(date>Date.now){
+                    div.innertext = "you are not born yet"
+                }else if(num>100){
+                    div.innertext = "can't be older than 100"
+                }else if(date==21){
+                    div.innertext="It appears you just turned 21 today. Please drink responsibly."
+
+                }else{
+                    div.innertext="It appears your date is incorect. Please try again"
+                }
+            })
+        })
+       
+    </script>
+</body>
+</html>

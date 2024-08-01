@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="exam-q1.html">
+        <input type="number" id="numInput" min="0" required>
+        <button type="button" id="addBtn">Add</button>
+        <button type="button" id="viewBtn">View</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            const evenNums = [];
+
+            const addBtn = document.getElementById("addBtn")
+            addBtn.addEventListener('click', addPositives)
+
+            const viewBtn = document.getElementById("viewBtn")
+            addBtn.addEventListener('click', viewPositives)
+
+            function addPositives() {
+                // alert("F")
+                const numInput = document.getElementById('numInput');
+                const num = parseInt(numInput.value, 10);
+                if (num >= 0 && isEven(num)) {
+                    // alert(num)
+                    evenNums.push(num);
+                    numInput.value = '';  // Clear the input field after adding
+                }
+            }
+
+            function isEven(num) {
+                return num % 2 === 0;
+            }
+
+            function viewPositives() {
+                const uniqueEvens = Array.from(new Set(evenNums));
+                updateDiv(uniqueEvens);
+            }
+
+            function updateDiv(nums) {
+                document.getElementById("result").innerText = nums.join(', ');
+            }
+        });
+    </script>
+    
+</body>
+</html>
